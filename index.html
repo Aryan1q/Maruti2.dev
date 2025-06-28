@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maruti Enterprises | Construction Partner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Intro Logo Animation Styles */
+
+    body:not(.intro-complete) .top-bar,
+    body:not(.intro-complete) .header,
+    body:not(.intro-complete) .hero {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    body.intro-complete .top-bar,
+    body.intro-complete .header,
+    body.intro-complete .hero {
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(720deg); }
+    }
+
+    @keyframes burst {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(10); opacity: 0; }
+    }
+
+@media (max-width: 768px) {
+  .welcome,
+  .description,
+  .hero h1 {
+    text-align: left !important;
+  }
+}
+
+  </style>
+
+<script>
+    // Intro logo animation logic
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelector('.intro').style.display = 'none';
+        document.body.classList.add('intro-complete');
+      }, 3000);
+    });
+  </script>
+
+</head>
+
+<body>
+ 
+ <!-- 🌟 Intro Logo Animation -->
+
+<div class="intro" id = "intro">
+  <div class="intro-content">
+    <img src="https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/b/AmazonStores/A21TJRUUN4KGV/f805322daab50f917debe30ba24cf7d3.w400.h400.png" alt="Intro Logo" class="intro-logo" />
+    <div class="intro-text"><dtrong></strong>MARUTI ENTERPRISES</strong></div>
+  </div>
+</div>
+  <!-- 🌐 Top Bar -->
+  <section class="top-bar">
+    <div class="container">
+      <span>📞 : +91 96967 46019</span>
+      <div class="socials">
+        <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔻 Header / Navbar -->
+  <section class="header">
+    <div class="container navbar">
+      <img class="Maruti_logo" src="https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/b/AmazonStores/A21TJRUUN4KGV/f805322daab50f917debe30ba24cf7d3.w400.h400.png">
+      <div class="logo">MARUTI ENTERPRISES</div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="machinery.html">Equipments & Machinery</a>
+        <a href="services.html">Services</a>
+        <a href="clients.html">Clients</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="#quote" class="btn quote-btn">GET A QUOTE</a>
+    </div>
+  </section>
+
+  <!-- 🏗️ Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <section class="bg-paragraph-section"></section>
+      <p class="welcome"><strong>WELCOME TO MARUTI ENTERPRISES</strong></p>
+      <h1>YOUR TRUSTED<br>MECHANICAL PARTNER</h1>
+      <p class="description">
+        We Specializes in rolling mills, block mills, and complete project solutions. From dismantling and removal to precise erection and installation, we deliver reliable, end-to-end mechanical services with a focus on quality, safety, and on-time execution. Backed by industry expertise and technical excellence, we ensure every project runs smoothly and efficiently.
+      </p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn white">OUR SERVICES</a>
+        <a href="contact.html" class="btn outline">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<footer class="site-footer">
+  <div class="container grid">
+    <div><h4>Connect</h4><p><i class="fab fa-facebook"></i> FB<br><i class="fab fa-instagram"></i> IG</p></div>
+  </div>
+  <p>Copyright © Maruti Enterprises. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
