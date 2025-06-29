@@ -3,19 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery | Maruti Enterprises</title>
+  <title>About | Maruti Enterprises</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-.top-bar, .header {
-  opacity: 1 !important;
-  pointer-events: all !important;
-}
-</style>
+  <style>
+    .top-bar, .header {
+      opacity: 1 !important;
+      pointer-events: all !important;
+    }
+
+    .typewriter {
+      display: flex;
+      justify-content: center;
+    }
+
+    .typewriter h2 {
+      font-family: monospace;
+      font-size: 1.8rem;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      width: 0ch;
+      animation: typing 2.5s steps(20, end) forwards, blink 0.8s step-end infinite;
+    }
+
+    .typewriter.done h2 {
+      border-right: none;
+    }
+
+    @keyframes typing {
+      from { width: 0ch; }
+      to { width: 20ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.querySelector(".typewriter").classList.add("done");
+      }, 2600); // Match typing duration
+    });
+  </script>
 </head>
 
 <body class="intro-complete">
-<section class="top-bar">
+  <section class="top-bar">
     <div class="container">
       <span>📞 : +91 96967 46019</span>
       <div class="socials">
@@ -26,6 +62,7 @@
       </div>
     </div>
   </section>
+
   <!-- 🔻 Header / Navbar -->
   <section class="header">
     <div class="container navbar">
@@ -48,42 +85,42 @@
   <section class="about" id="about">
     <div class="about-hero">
       <div class="about-text container">
-        <h2>Committed To Build Quality</h2>
+        <div class="typewriter">
+          <h2>Committed To Quality</h2>
+        </div>
         <p>
-          Maruti Enterprises is a dynamic and growing service provider in the mechanical industry, specializing in block mill, rolling mill, and the  erection, installation, and dismantling of heavy industrial machinery and structures. With a strong commitment to quality, safety, and timely execution, we partner with leading industries to deliver reliable and efficient mechanical solutions.
+          Maruti Enterprises is a dynamic and growing service provider in the mechanical industry, specializing in block mill, rolling mill, and the erection, installation, and dismantling of heavy industrial machinery and structures. With a strong commitment to quality, safety, and timely execution, we partner with leading industries to deliver reliable and efficient mechanical solutions.
         </p>
         <p>
           Our company was established by Mr. Dilip Kumar, whose vision and leadership continue to drive our growth and innovation. The strategic guidance of Mrs. Arti Sachan, serving as a member of our Board of Directors, ensures we remain focused on excellence and customer satisfaction.
         </p>
         <p>
-          We are currently engaged in several ongoing projects, reflecting our capabilities, client trust, and growing footprint in the industry.
-          At Maruti Enterprises, we believe in building long-term relationships with our clients by providing services that are tailored to meet their specific needs, while maintaining the highest standards of professionalism, technical expertise, and operational efficiency.
+          We are currently engaged in several ongoing projects, reflecting our capabilities, client trust, and growing footprint in the industry. At Maruti Enterprises, we believe in building long-term relationships with our clients by providing services that are tailored to meet their specific needs, while maintaining the highest standards of professionalism, technical expertise, and operational efficiency.
         </p>
         <a href="#contact" class="btn dark">GET IN TOUCH</a>
       </div>
     </div>
 
-  <!-- 📊 Stats Section -->
-  <section class="stats" id="stats">
-    <div class="container stats-container">
-      <div class="stats-left">
-        <h4>Build Your Dream</h4>
-        <h2>2+ Years Of Undefeated Success</h2>
-        <p>
-          Maruti Enterprises brings 2+ years of combined expertise to every project, delivering excellence in construction solutions
-          with a focus on precision and craftsmanship.
-        </p>
-        <a href="#quote" class="btn dark">WORK WITH US</a>
+    <!-- 📊 Stats Section -->
+    <section class="stats" id="stats">
+      <div class="container stats-container">
+        <div class="stats-left">
+          <h4>Build Your Dream</h4>
+          <h2>2+ Years Of Undefeated Success</h2>
+          <p>
+            Maruti Enterprises brings 2+ years of combined expertise to every project, delivering excellence in construction solutions with a focus on precision and craftsmanship.
+          </p>
+          <a href="#quote" class="btn dark">WORK WITH US</a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat"><h3>5+</h3><p><strong><i>Successfully Project Finished.</i></strong></p></div>
+          <div class="stat"><h3>2+</h3><p><strong><i>Years of experience with proud</i></strong></p></div>
+          <div class="stat"><h3>50 - 100</h3><p><strong><i>Team Size</i></strong></p></div>
+        </div>
       </div>
-      <div class="stats-grid">
-        <div class="stat"><h3>5+</h3><p><strong><i>Successfully Project Finished.</i></strong></p></div>
-        <div class="stat"><h3>2+</h3><p><strong><i>Years of experience with proud</i></strong></p></div>
-        <div class="stat"><h3>50 - 100</h3><p><strong><i>Team Size</i></strong></p></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-      <div class="about-best-practices container">
+    <div class="about-best-practices container">
       <div class="about-img">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3TICLycBqJj4zLsTPAsYIbdpoi7MkDpo9HQ&s" alt="Team Working">
       </div>
@@ -105,41 +142,38 @@
       </div>
     </div>
   </section>
-</body>
 
-<footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">MARUTI ENTERPRISES</div>
-                <p class="footer-about">we are a leading mechanical company</p>
-                <p class="footer-hours">Mon - Sat 8:00 - 17:30, Sunday - CLOSED</p>
-            </div>
-            
-        <div class="footer-section">
-            <h3>Our Services</h3>
-            <ul class="footer-services">
-                <li><a href="services.html">Rolling mill and Block mill project execution</a></li>
-                <li><a href="services.html">Machinery erection and installation</a></li>
-                <li><a href="services.html">Plant dismantling and relocation</a></li>
-                <li><a href="services.html">On-site technical support and supervision</a></li>
-            </ul>
-        </div>
-            
-            <div class="footer-section">
-                <h3>Address</h3>
-                <div class="footer-address">
-                    <p><i class="fas fa-map-marker-alt"></i>76- Lifecity , Kalli Billod</p>
-                    <p><i class="fas fa-map-pin"></i>Area- Betma, City- Indore</p>
-                    <p><i class="fas fa-flag"></i>MADHYA PRADESH-453001 INDIA</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            Copyright © 2025 MARUTI ENTERPRISES. All rights reserved.
-        </div>
-    </footer>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">MARUTI ENTERPRISES</div>
+        <p class="footer-about">we are a leading mechanical company</p>
+        <p class="footer-hours">Mon - Sat 8:00 - 17:30, Sunday - CLOSED</p>
+      </div>
 
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <ul class="footer-services">
+          <li><a href="services.html">Rolling mill and Block mill project execution</a></li>
+          <li><a href="services.html">Machinery erection and installation</a></li>
+          <li><a href="services.html">Plant dismantling and relocation</a></li>
+          <li><a href="services.html">On-site technical support and supervision</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-section">
+        <h3>Address</h3>
+        <div class="footer-address">
+          <p><i class="fas fa-map-marker-alt"></i>76- Lifecity , Kalli Billod</p>
+          <p><i class="fas fa-map-pin"></i>Area- Betma, City- Indore</p>
+          <p><i class="fas fa-flag"></i>MADHYA PRADESH-453001 INDIA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      Copyright © 2025 MARUTI ENTERPRISES. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>

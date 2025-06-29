@@ -488,18 +488,26 @@ body.intro-complete .hero {
 .section-header h2 {
   font-size: 32px;
   margin-bottom: 15px;
+  animation-name: zoomIn;
+  animation-duration: 2s;
 }
 
 .section-header p {
   font-size: 16px;
   max-width: 700px;
   margin: 0 auto 40px;
+  animation-name: zoomIn;
+  animation-duration: 3s;
 }
 
 .equipment-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .equipment-card {
@@ -648,50 +656,66 @@ a {
 }
 
 .gallery {
-  background: #f8f9fa;
-  padding: 80px 0;
+  background: transparent;
+  padding: 80px 0 100px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
+
 .gallery .section-title {
-  font-size: 32px;
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #fff;
   margin-bottom: 10px;
-  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
+
 .gallery .section-subtitle {
-  font-size: 16px;
-  margin-bottom: 40px;
-  color: white;
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: #e0e0e0;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  height: 3500px;
+  gap: 25px;
 }
+
 .gallery-item {
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
+
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
+
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1.1);
 }
-  .Gallery-back {
-  background-image: url("https://img.freepik.com/free-photo/cosmic-background-with-colorful-laser-lights-with-cool-shapes_181624-26140.jpg");
-  height : 100%;          /* Ensure it covers the full area */
-  background-position: center;     /* Center the image */    /* Prevent tiling */
-  min-height: 100vh;               /* Give it height if container is empty */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.gallery-item:hover {
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1), 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.Gallery-back {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                    url("https://png.pngtree.com/thumb_back/fw800/background/20220109/pngtree-blue-abstract-background-image_981828.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 /* Intro Section */
@@ -796,7 +820,6 @@ a {
   font-size: 1rem;
   color: antiquewhite;
 }
-
 footer {
 background-color: #121212;
 color: #ffffff;
@@ -942,4 +965,3 @@ display: none;
 justify-content: center;
 }
 }
-

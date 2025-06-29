@@ -3,19 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery | Maruti Enterprises</title>
+  <title>Machinery | Maruti Enterprises</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-.top-bar, .header {
-  opacity: 1 !important;
-  pointer-events: all !important;
-}
-</style>
+  <style>
+    .top-bar, .header {
+      opacity: 1 !important;
+      pointer-events: all !important;
+    }
+
+    .typewriter {
+      display: flex;
+      justify-content: center;
+    }
+
+    .typewriter h2 {
+      font-family: monospace;
+      font-size: 1.5rem;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      width: 0ch;
+      animation:
+        typing 3s steps(27, end) forwards,
+        blink 0.8s step-end infinite;
+    }
+
+    .typewriter.done h2 {
+      border-right: none;
+    }
+
+    @keyframes typing {
+      from { width: 0ch; }
+      to { width: 27ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.querySelector(".typewriter").classList.add("done");
+      }, 3100); // Match typing duration
+    });
+  </script>
 </head>
 
 <body class="intro-complete">
-<section class="top-bar">
+  <section class="top-bar">
     <div class="container">
       <span>📞 : +91 96967 46019</span>
       <div class="socials">
@@ -26,6 +82,7 @@
       </div>
     </div>
   </section>
+
   <!-- 🔻 Header / Navbar -->
   <section class="header">
     <div class="container navbar">
@@ -48,7 +105,9 @@
   <section class="equipments" id="equipments">
     <div class="container">
       <div class="section-header with-bg">
-        <h2>Our Equipments & Machinery</h2>
+        <div class="typewriter">
+          <h2>Our Equipments & Machinery</h2>
+        </div>
         <p>
           <i>
           At Maruti Enterprises, we understand that successful project execution depends on having the right equipment and technology. That’s why we use a wide range of modern, well-maintained machinery and tools that meet industrial standards for safety, accuracy, and efficiency.
@@ -62,40 +121,40 @@
         <div class="equipment-card"><img src="https://www.aspm.in/wp-content/uploads/2021/02/g2-1-1024x512.png" alt="Rolling"><h4>Rolling Mills</h4></div>
         <div class="equipment-card"><img src="https://ammantry.com/wp-content/uploads/2023/04/AMMAN-TRY-Fully-Automated-No-Twist-Mill-Technology.jpeg" alt="Block"><h4>Block Mills</h4></div>
       </div>
+    </div>
   </section>
 
-<footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">MARUTI ENTERPRISES</div>
-                <p class="footer-about">we are a leading mechanical company</p>
-                <p class="footer-hours">Mon - Sat 8:00 - 17:30, Sunday - CLOSED</p>
-            </div>
-            
-        <div class="footer-section">
-            <h3>Our Services</h3>
-            <ul class="footer-services">
-                <li><a href="services.html">Rolling mill and Block mill project execution</a></li>
-                <li><a href="services.html">Machinery erection and installation</a></li>
-                <li><a href="services.html">Plant dismantling and relocation</a></li>
-                <li><a href="services.html">On-site technical support and supervision</a></li>
-            </ul>
-        </div>
-            
-            <div class="footer-section">
-                <h3>Address</h3>
-                <div class="footer-address">
-                    <p><i class="fas fa-map-marker-alt"></i>76- Lifecity , Kalli Billod</p>
-                    <p><i class="fas fa-map-pin"></i>Area- Betma, City- Indore</p>
-                    <p><i class="fas fa-flag"></i>MADHYA PRADESH-453001 INDIA</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            Copyright © 2025 MARUTI ENTERPRISES. All rights reserved.
-        </div>
-    </footer>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">MARUTI ENTERPRISES</div>
+        <p class="footer-about">we are a leading mechanical company</p>
+        <p class="footer-hours">Mon - Sat 8:00 - 17:30, Sunday - CLOSED</p>
+      </div>
 
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <ul class="footer-services">
+          <li><a href="services.html">Rolling mill and Block mill project execution</a></li>
+          <li><a href="services.html">Machinery erection and installation</a></li>
+          <li><a href="services.html">Plant dismantling and relocation</a></li>
+          <li><a href="services.html">On-site technical support and supervision</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Address</h3>
+        <div class="footer-address">
+          <p><i class="fas fa-map-marker-alt"></i>76- Lifecity , Kalli Billod</p>
+          <p><i class="fas fa-map-pin"></i>Area- Betma, City- Indore</p>
+          <p><i class="fas fa-flag"></i>MADHYA PRADESH-453001 INDIA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      Copyright © 2025 MARUTI ENTERPRISES. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>

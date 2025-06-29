@@ -6,10 +6,62 @@
   <title>Gallery | Maruti Enterprises</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .typewriter {
+      display: flex;
+      justify-content: center;
+    }
+
+    .typewriter h2 {
+      font-family: monospace;
+      font-size: 2rem;
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0ch;
+      margin: 0;
+      padding: 0;
+      animation: typing 2.5s steps(22, end) forwards;
+      position: relative;
+    }
+
+    .typewriter h2::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background-color: white;
+      animation: blink 0.8s step-end infinite;
+    }
+
+    .typewriter h2.typed::after {
+      display: none;
+    }
+
+    @keyframes typing {
+      from { width: 0ch; }
+      to { width: 22ch; }
+    }
+
+    @keyframes blink {
+      50% { background-color: transparent; }
+    }
+
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const heading = document.querySelector('.typewriter h2');
+      setTimeout(() => {
+        heading.classList.add('typed');
+      }, 2600);
+    });
+  </script>
 </head>
 
 <body class="intro-complete">
-<section class="top-bar">
+  <section class="top-bar">
     <div class="container">
       <span>📞 : +91 96967 46019</span>
       <div class="socials">
@@ -20,91 +72,93 @@
       </div>
     </div>
   </section>
-  <!-- 🔻 Header / Navbar -->
+
   <section class="header">
     <div class="container navbar">
       <img class="Maruti_logo" src="https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/b/AmazonStores/A21TJRUUN4KGV/f805322daab50f917debe30ba24cf7d3.w400.h400.png">
       <div class="logo">MARUTI ENTERPRISES</div>
       <nav>
         <a href="index.html">Home</a>
-        <a href="about,html">About</a>
-        <a href="machinery.html">Equipments & Machinery</a>
-        <a href="services.html">Services</a>
-        <a href="clients.html">Clients</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#equipments">Equipments & Machinery</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#clients">Clients</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
       <a href="index.html#quote" class="btn quote-btn">GET A QUOTE</a>
     </div>
   </section>
-  <!-- Gallery Section -->
+
   <section class="gallery">
-  <div class="Gallery-back">
-    <div class="container">
-      <h2 class="section-title">Our Project Gallery</h2>
-      <p class="section-subtitle">A showcase of our latest projects and machinery</p>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="img1.jpg" alt="Project 1" /></div>
-        <div class="gallery-item"><img src="img2.jpg" alt="Project 2" /></div>
-        <div class="gallery-item"><img src="img3.jpg" alt="Project 3" /></div>
-        <div class="gallery-item"><img src="img4.jpg" alt="Project 4" /></div>
-        <div class="gallery-item"><img src="img5.jpg" alt="Project 5" /></div>
-        <div class="gallery-item"><img src="images/img6.jpg" alt="Project 6" /></div>
-        <div class="gallery-item"><img src="images/img7.jpg" alt="Project 7" /></div>
-        <div class="gallery-item"><img src="images/img8.jpg" alt="Project 8" /></div>
-        <div class="gallery-item"><img src="images/img9.jpg" alt="Project 9" /></div>
-        <div class="gallery-item"><img src="images/img10.jpg" alt="Project 10" /></div>
-        <div class="gallery-item"><img src="images/img11.jpg" alt="Project 11" /></div>
-        <div class="gallery-item"><img src="images/img12.jpg" alt="Project 12" /></div>
-        <div class="gallery-item"><img src="images/img13.jpg" alt="Project 13" /></div>
-        <div class="gallery-item"><img src="images/img14.jpg" alt="Project 14" /></div>
-        <div class="gallery-item"><img src="images/img15.jpg" alt="Project 15" /></div>
-        <div class="gallery-item"><img src="images/img16.jpg" alt="Project 16" /></div>
-        <div class="gallery-item"><img src="images/img17.jpg" alt="Project 17" /></div>
-        <div class="gallery-item"><img src="images/img18.jpg" alt="Project 18" /></div>
-        <div class="gallery-item"><img src="images/img19.jpg" alt="Project 19" /></div>
-        <div class="gallery-item"><img src="images/img20.jpg" alt="Project 20" /></div>
-        <div class="gallery-item"><img src="images/img21.jpg" alt="Project 21" /></div>
-        <div class="gallery-item"><img src="images/img22.jpg" alt="Project 22" /></div>
-        <div class="gallery-item"><img src="images/img23.jpg" alt="Project 23" /></div>
-        <div class="gallery-item"><img src="images/img24.jpg" alt="Project 24" /></div>
-        <!-- Add more images as needed -->
+    <div class="Gallery-back">
+      <div class="container">
+        <div class="typewriter">
+          <h2>Our Project Gallery</h2>
+        </div>
+        <p class="section-subtitle">A showcase of our latest projects and machinery</p>
+        <div class="gallery-grid">
+          <!-- Gallery Images -->
+          <div class="gallery-item"><img src="images/img1.jpg" alt="Project 1" /></div>
+          <div class="gallery-item"><img src="images/img2.jpg" alt="Project 2" /></div>
+          <div class="gallery-item"><img src="images/img3.jpg" alt="Project 3" /></div>
+          <div class="gallery-item"><img src="images/img4.jpg" alt="Project 4" /></div>
+          <div class="gallery-item"><img src="images/img5.jpg" alt="Project 5" /></div>
+          <div class="gallery-item"><img src="images/img6.jpg" alt="Project 6" /></div>
+          <div class="gallery-item"><img src="images/img7.jpg" alt="Project 7" /></div>
+          <div class="gallery-item"><img src="images/img8.jpg" alt="Project 8" /></div>
+          <div class="gallery-item"><img src="images/img9.jpg" alt="Project 9" /></div>
+          <div class="gallery-item"><img src="images/img10.jpg" alt="Project 10" /></div>
+          <div class="gallery-item"><img src="images/img11.jpg" alt="Project 11" /></div>
+          <div class="gallery-item"><img src="images/img12.jpg" alt="Project 12" /></div>
+          <div class="gallery-item"><img src="images/img13.jpg" alt="Project 13" /></div>
+          <div class="gallery-item"><img src="images/img14.jpg" alt="Project 14" /></div>
+          <div class="gallery-item"><img src="images/img15.jpg" alt="Project 15" /></div>
+          <div class="gallery-item"><img src="images/img16.jpg" alt="Project 16" /></div>
+          <div class="gallery-item"><img src="images/img17.jpg" alt="Project 17" /></div>
+          <div class="gallery-item"><img src="images/img18.jpg" alt="Project 18" /></div>
+          <div class="gallery-item"><img src="images/img19.jpg" alt="Project 19" /></div>
+          <div class="gallery-item"><img src="images/img20.jpg" alt="Project 20" /></div>
+          <div class="gallery-item"><img src="images/img21.jpg" alt="Project 21" /></div>
+          <div class="gallery-item"><img src="images/img22.jpg" alt="Project 22" /></div>
+          <div class="gallery-item"><img src="images/img23.jpg" alt="Project 23" /></div>
+          <div class="gallery-item"><img src="images/img24.jpg" alt="Project 24" /></div>
+        </div>
       </div>
     </div>
   </section>
 
-<footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <div class="footer-logo">MARUTI ENTERPRISES</div>
-                <p class="footer-about">we are a leading mechanical company</p>
-                <p class="footer-hours">Mon - Sat 8:00 - 17:30, Sunday - CLOSED</p>
-            </div>
-            
-        <div class="footer-section">
-            <h3>Our Services</h3>
-            <ul class="footer-services">
-                <li><a href="services.html">Rolling mill and Block mill project execution</a></li>
-                <li><a href="services.html">Machinery erection and installation</a></li>
-                <li><a href="services.html">Plant dismantling and relocation</a></li>
-                <li><a href="services.html">On-site technical support and supervision</a></li>
-            </ul>
-        </div>
-            
-            <div class="footer-section">
-                <h3>Address</h3>
-                <div class="footer-address">
-                    <p><i class="fas fa-map-marker-alt"></i>76- Lifecity , Kalli Billod</p>
-                    <p><i class="fas fa-map-pin"></i>Area- Betma, City- Indore</p>
-                    <p><i class="fas fa-flag"></i>MADHYA PRADESH-453001 INDIA</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            Copyright © 2025 MARUTI ENTERPRISES. All rights reserved.
-        </div>
-    </footer>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">MARUTI ENTERPRISES</div>
+        <p class="footer-about">we are a leading mechanical company</p>
+        <p class="footer-hours">Mon - Sat 8:00 - 17:30, Sunday - CLOSED</p>
+      </div>
 
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <ul class="footer-services">
+          <li><a href="services.html">Rolling mill and Block mill project execution</a></li>
+          <li><a href="services.html">Machinery erection and installation</a></li>
+          <li><a href="services.html">Plant dismantling and relocation</a></li>
+          <li><a href="services.html">On-site technical support and supervision</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Address</h3>
+        <div class="footer-address">
+          <p><i class="fas fa-map-marker-alt"></i>76- Lifecity , Kalli Billod</p>
+          <p><i class="fas fa-map-pin"></i>Area- Betma, City- Indore</p>
+          <p><i class="fas fa-flag"></i>MADHYA PRADESH-453001 INDIA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      Copyright © 2025 MARUTI ENTERPRISES. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
