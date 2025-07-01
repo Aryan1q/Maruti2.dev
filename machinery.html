@@ -12,36 +12,86 @@
       pointer-events: all !important;
     }
 
-    .typewriter {
-      display: flex;
-      justify-content: center;
-    }
+.typewriter {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
 
-    .typewriter h2 {
-      font-family: monospace;
-      font-size: 1.5rem;
-      color: white;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid white;
-      width: 0ch;
-      animation:
-        typing 3s steps(27, end) forwards,
-        blink 0.8s step-end infinite;
-    }
+.typewriter h2 {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  width: 0ch;
+  animation:
+    typing 3s steps(27, end) forwards,
+    blink 0.8s step-end infinite;
+}
 
-    .typewriter.done h2 {
-      border-right: none;
-    }
+.typewriter.done h2 {
+  border-right: none;
+}
 
-    @keyframes typing {
-      from { width: 0ch; }
-      to { width: 27ch; }
-    }
+/* Typewriter animation keyframes */
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 27ch; }
+}
 
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* 🔧 Mobile Fix */
+@media screen and (max-width: 600px) {
+  .typewriter h2 {
+    font-size: 1rem;
+    animation:
+      typing-mobile 2.5s steps(20, end) forwards,
+      blink 0.8s step-end infinite;
+  }
+}
+.equipment-section {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('your-background-image.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.equipment-section h2 {
+  font-family: monospace;
+  font-size: 1.5rem;
+  white-space: normal;
+  word-break: break-word;
+  margin-bottom: 15px;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .equipment-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .equipment-section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+
+@keyframes typing-mobile {
+  from { width: 0ch; }
+  to { width: 20ch; } /* Fewer characters to fit smaller screens */
+}
+
 
     @keyframes zoomIn {
       0% {
@@ -170,7 +220,7 @@
     <div class="container">
       <div class="section-header with-bg">
         <div class="typewriter">
-          <h2>Our Equipments & Machinery</h2>
+          <h2>Equipment & Machinery</h2>
         </div>
         <p>
           <i>

@@ -211,8 +211,56 @@ nav a.active {
   }
 }
 
+    .typewriter {
+      display: flex;
+      justify-content: center;
+    }
 
-/* Hero Section */
+    .typewriter h2 {
+      font-family: monospace;
+      font-size: 1.8rem;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      width: 0ch;
+      animation: typing 2.5s steps(20, end) forwards, blink 0.8s step-end infinite;
+    }
+
+    .typewriter.done h2 {
+      border-right: none;
+    }
+
+    @keyframes typing {
+      from { width: 0ch; }
+      to { width: 20ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+.hero {
+  background-image: url('https://images.stockcake.com/public/4/2/0/4202aedf-db5f-400e-a1eb-93c1342a7718_large/industrial-teamwork-inspection-stockcake.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 80px 20px; /* More vertical padding, balanced horizontal */
+  border-radius: 8px;
+  text-align: center;
+  min-height: 60vh; /* Ensure visibility on tall phones */
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 600px) {
+  .hero {
+    background-position: center top; /* Focus on top where main subject usually is */
+    padding: 60px 15px;
+  }
+}
+
+
 .hero {
   position: relative;
   height: 100vh;
@@ -272,12 +320,12 @@ nav a.active {
 /* ---------------------- */
 @media (max-width: 768px) {
   .hero {
-    padding: 0 20px;
-    text-align: center;
+    padding: 0 0px;
+    text-align: left;
   }
 
   .hero-content {
-    max-width: 100%;
+    max-width: auto;
   }
 
   .hero h1 {
@@ -489,13 +537,23 @@ body.intro-complete .hero {
   }
 }
 
-/* About Hero Background Section */
 .about-hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), 
-              url('https://miro.medium.com/v2/resize:fit:764/1*zu4GIQ9irl2PXJ1r85fSUw.jpeg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),
+              url('https://fs.tu-varna.bg/wp-content/uploads/computer-aided-manufacturing-technologies-03.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  padding: 100px 0;
+  padding: 100px 20px; /* Add horizontal padding for smaller screens */
+  text-align: center;
+}
 
+/* Mobile-Specific Adjustments */
+@media screen and (max-width: 600px) {
+  .about-hero {
+    padding: 80px 10px;
+    background-position: center top; /* Focus more on top content */
+  }
 }
 
 .about-hero .about-text {
@@ -522,6 +580,12 @@ body.intro-complete .hero {
 .about-hero p {
   font-size: 16px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .typewriter h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Best Practices Grid */
@@ -562,11 +626,57 @@ body.intro-complete .hero {
   width :10px;
 }
 .equipments {
-  background: #f7f7f7;
-  padding: 80px 0;
-  color: #333;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://wallpapers.com/images/hd/machine-1920-x-1080-background-27jixyl6v43x9hw0.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  color: #fff;
   text-align: center;
 }
+
+/* 📱 Responsive for max-width 600px (phones) */
+@media screen and (max-width: 600px) {
+  .equipments {
+    padding: 50px 15px;
+    background-position: right bottom;
+    background-size: cover;
+  }
+
+  .section-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+  }
+}
+
+.equipment-card {
+  background: rgba(0, 0, 0, 0.75); /* dark overlay for contrast */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 90%;
+  width: 100%;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: left;
+  line-height: 1.5;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Responsive fix for small screens */
+@media screen and (max-width: 600px) {
+  .equipment-card {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .equipment-card h2, .equipment-card h3, .equipment-card h4 {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+}
+
 
 .section-header h2 {
   font-size: 32px;
@@ -588,13 +698,13 @@ body.intro-complete .hero {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
   animation-name: pulse;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
 .equipment-card {
-  background: white;
+  background: rgba(184, 134, 11 , 0.3);
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -616,15 +726,6 @@ body.intro-complete .hero {
 .equipment-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.hero{
-  background-image: url('https://images.stockcake.com/public/4/2/0/4202aedf-db5f-400e-a1eb-93c1342a7718_large/industrial-teamwork-inspection-stockcake.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
 }
 
 .section-header.with-bg {
