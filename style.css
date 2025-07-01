@@ -627,7 +627,7 @@ body.intro-complete .hero {
 }
 .equipments {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('https://wallpapers.com/images/hd/machine-1920-x-1080-background-27jixyl6v43x9hw0.jpg') center/cover no-repeat;
+              url('https://w0.peakpx.com/wallpaper/28/998/HD-wallpaper-mechanical-heart-dfsx.jpg') center/cover no-repeat;
   padding: 80px 20px;
   color: #fff;
   text-align: center;
@@ -637,7 +637,7 @@ body.intro-complete .hero {
 @media screen and (max-width: 600px) {
   .equipments {
     padding: 50px 15px;
-    background-position: right bottom;
+    background-position: right top;
     background-size: cover;
   }
 
